@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<h1>JOIN NOW!</h1>
+<form method = 'POST' action=''>{%csrf_token%}
+    {{form.as_p}}
+    <input type = 'submit' class = "btn btn-primary btn-lg btn-block" >
+</form>
+{% endblock %}
+

@@ -1,0 +1,18 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+{% block content %}
+    
+{%for image in object_list %}
+
+ <img src= {{media_root}} {{image.url}} />
+
+{%endfor%}
+
+{%endblock%}
+
+
+
+</html>

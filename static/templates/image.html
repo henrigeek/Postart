@@ -1,0 +1,10 @@
+{% extends 'base_photo.html' %}
+
+{% block content %}
+    {%for image in Image%}
+        <p><a> href = "/image/{{image.slug}}" <img src=" {{Image.image.url}}" /> {{Image}} </a></p>
+    {%endfor%}
+{%endblock%}
+
+
+    
