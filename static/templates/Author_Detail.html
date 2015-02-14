@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<!--
+
+-->
+
+<head>
+
+</head>
+<html lang="en">
+    <body>
+        
+            <li>p {{ author.full_name }}</li>
+        {% load thumbnail %}
+
+        <p> <a href = {{author.headshot.url}} title = {{author.full_name}} data-gallery=""><img src={{author.headshot|thumbnail_url:'large'}} alt = "photo" class = "slide"/></a></p>
+        
+    </body>
+</html>
+
+    

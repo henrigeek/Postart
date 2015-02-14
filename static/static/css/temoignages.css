@@ -1,0 +1,58 @@
+
+
+/*Ajout d'une marge au dessus pour ne pas etre gene par la NAVBAR*/
+
+.temoignages h1
+{
+    text-align:center;
+    
+}
+
+.temoignages h4
+{
+ color:#777777;
+ text-align:center;
+ padding:0 0 0 0;
+}
+
+
+
+
+
+/* Mise en forme de la 1ere section : how it works*/
+
+.sub-temoignage-1
+{
+    text-align:center;
+    padding: 0 0 100px 0;
+}
+
+.sub-temoignage-1 .row
+{
+    padding: 50px 0 100px 0;
+}
+
+
+.sub-temoignage-1 .glyphicon
+{
+    font-size: 100px;
+}
+
+.sub-temoignage-2
+{
+    background-color:#F6F7FA;
+    padding: 50px 0 50px 0; 
+}
+ 
+
+
+
+/* Taille des photos featurettes */
+
+.featurette-image img-responsive
+{
+    width:200px;
+    heigth:200px;
+}
+
+

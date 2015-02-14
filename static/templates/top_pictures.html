@@ -1,0 +1,22 @@
+{%extends 'Frontpage.html'%}
+
+{% block top_pictures %}
+
+
+
+{% for image in object_list %}
+
+<div class="col-lg-4 col-sm-6 col-xs-12">
+    
+    <a href = "image/{{image.id}}" title = {{image.title}} data-gallery="" >
+        <img src={{image.image.url}} class = "img-responsive"/></a>
+ </div>       
+{% endfor %}
+
+
+</div>
+{%endblock%}
+
+
+
+</html>

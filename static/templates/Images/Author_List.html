@@ -1,0 +1,29 @@
+{%extends 'Frontpage3.html'%}
+
+{% block author_list %}
+
+
+
+{% for author  in object_list %}
+    <li>{{ author.first_name }}</li>
+    <div class="row">
+    {% for image in 'imageauthor_list' %}
+
+<div class="col-lg-4 col-sm-6 col-xs-12">
+    
+     {% load thumbnail %}
+    <a href = {{image.image.url}} title = {{image.title}} data-gallery="" >
+    <img src={{image.image|thumbnail_url:'large'}} class = class="thumbnail img-responsive"/></a>
+    
+ </div>
+{% endfor %}
+</div>
+{% endfor %}
+
+
+
+{%endblock%}
+
+
+
+</html>

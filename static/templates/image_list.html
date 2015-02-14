@@ -1,17 +1,22 @@
 
-<!DOCTYPE HTML>
 
-<html>
 
-{% block content %}
+
+
+{% for image  in object_list %}
+<div class="row">
+   
+    <div class="col-sm-6">     
+    <a href = "{{image.id}}" title = {{image.title}} data-gallery="" >
+    <img src={{image.image.url}} class = "img-responsive"/></a>
     
-{%for image in object_list %}
+ </div>
+</div>
+{% endfor %}
 
- <img src= {{media_root}} {{image.url}} />
 
-{%endfor%}
 
-{%endblock%}
+
 
 
 

@@ -1,0 +1,32 @@
+/*Customization de la galerie de photos par Guigui*/
+
+.gallery h1
+{
+    text-align:center;
+    
+}
+
+.gallery h4
+{
+ color:#777777;
+ text-align:center;
+ padding:0 0 0 0;
+}
+
+
+
+.gallery
+{
+    padding: 50px 0 50px 0;
+    top:100px;
+    clear:both;
+}
+
+/*Customisation du "show me more"*/
+
+.gallery h2 a
+{
+    text-align:center;
+    color:#777777;
+    text-decoration:none;
+}

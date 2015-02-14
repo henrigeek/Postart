@@ -1,0 +1,51 @@
+
+
+
+
+.navbar-default
+{
+    border-bottom: 0.5 groove;
+    background-color:white;
+    text-transform: uppercase;
+    text-align:center;
+    color:#27292D;
+    /* Couleur a reutiliser pour les boutons et le texte hors hover  */ 
+}
+
+.glyphicon 
+{
+    text-align:center;
+    font-size: 30px;
+    margin-top:10px;
+}
+
+
+
+.navbar-default .navbar-text
+{
+	color: #27292D;
+        font-size: 18px;
+        font-weight: bold;
+        text-align:left;
+}
+
+.navbar-btn
+{
+    margin-top:12px;
+    margin-right: 0px;
+    margin-left: 8px;
+    width:90px;
+    border:none;
+    
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight:bold;
+    background-color:#4C505A;
+    color:white;
+}
+
+#inscription
+{
+    background-color:#60A969;
+}
+

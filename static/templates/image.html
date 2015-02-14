@@ -1,10 +1,25 @@
-{% extends 'base_photo.html' %}
+<!DOCTYPE HTML>
+<!--
 
-{% block content %}
-    {%for image in Image%}
-        <p><a> href = "/image/{{image.slug}}" <img src=" {{Image.image.url}}" /> {{Image}} </a></p>
-    {%endfor%}
-{%endblock%}
+-->
 
+<head>
+
+</head>
+<html lang="en">
+    <body>
+        {% load thumbnail %}
+            <li>p {{ image.title }}</li>
+
+        <p> <a href = {{image.image.url}} title = {{image.title}} data-gallery=""><img src={{image.image|thumbnail_url:'large'}} alt = "photo" class = "slide"/></a></p>
+        <form action="" method="post" >{% csrf_token %}
+                    {{ form.as_p }}
+    <p>{{image.rating}} people like this</p>
+    <p><a href = "/photo/image/like/{{image.id}}">Like</a></p>
+    
+    
+</form>
+    </body>
+</html>
 
     

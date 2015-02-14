@@ -1,0 +1,27 @@
+{%extends 'Frontpage.html'%}
+
+{% block author_list %}
+
+
+
+{% for author  in object_list %}
+         {% load thumbnail %}
+         <div class="row featurette">
+        <div class="col-md-8">
+<ul>
+    <li>{{ author.first_name }}</li>
+    <li>{{ author.last_name }}</li>
+    <li>{{ author.email }}</li>
+</ul>
+    <img src={{author.headshot|thumbnail_url:'large'}} class = class="thumbnail img-responsive"/></a>
+        </div></div>
+{% endfor %}
+
+
+
+
+{%endblock%}
+
+
+
+</html>

@@ -1,0 +1,209 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Artbypeople</title>
+
+    <!-- CSS for Frontpage -->
+    <link href="/static/css/photo/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/photo/frontpage.css rel="stylesheet">
+      
+   
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/photo/html5shiv.min.js"></script>
+      <script src="/static/js/photo/respond.min.js"></script>
+    <![endif]-->
+
+    
+    
+  </head>
+  
+  
+<!-- NAVBAR
+================================================== -->
+  <body>
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          {% if not user.is_authenticated %}
+          
+          <h2 class="text-center"> <a href="{% url "mysite_login" %}">Sign In</a></h2>
+          {% block content %}
+          {%endblock%}
+          
+          
+          {% else %}
+          <h2 class="text-center"><a {{ user.username }} </a></h2>
+          <h2 class="text-center"><a href="{% url "mysite_logout" %}">Sign Out</a></h2>
+          {% endif %}
+          
+          <!--<a class="navbar-brand" href="#"> <img src="jumbotron/images/logo_ABP.png" id="logo_ABP" /> </a> -->
+          <a class="navbar-brand" href="frontpage3.html"> ArtByPeople </a>
+        </div>
+        
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Carousel
+    ================================================== -->
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" style="background-color:transparent">
+          <div class="container">
+              <img src="/media/images/Carousel_1bis.png" alt="First slide">
+                <div class="container">
+                  <div class="carousel-caption">
+                      <h1 class="titre_carousel">Art By People</h1>
+                      <p class="sub_carousel"> Share your best pictures and discover talented people around the world </p>
+                      <p><a class="btn btn-lg btn-primary" href="/photo/signup/" role="button">Tell me when you go live</a></p>
+                  </div>
+                </div>
+          </div> 
+        </div>
+              <div class="item">
+                <div class="container">
+                  <img src="/media/images/getty.jpg" alt="Second slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <h1 class="titre_carousel">Art By People</h1>
+                      <p class="sub_carousel">Decorate your living room with a social network or make some cash</p>
+                      <p><a class="btn btn-lg btn-primary" href="#" role="button">Tell me when you go live</a></p>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+ 
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <!-- START THE FEATURETTES -->
+
+      
+    <div class="container">
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-8">
+           
+          <h2 class="featurette-heading">Molka  <span class="text-muted"> Our first fan</span></h2>
+          <p class="lead"> Molka takes a lot of great shots everyweekend.She also loves to discover great photos from other people.</p>
+          <p class="lead"> Thanks to <em>ArtByPeople</em>, she inspire others and gets inspiration from our great community</p>
+        </div>
+        <div class="col-md-1"> </div>
+        <div class="col-md-3">
+          <img class="featurette-image img-responsive" src="/media/images/Photo_profile_molka.png" alt="Generic placeholder image 1">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-3">
+          <img class="featurette-image img-responsive" src="/media/images/Photo_island_bat.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-1"> </div>
+        <div class="col-md-8">
+          <h2 class="featurette-heading">John <span class="text-muted">Our first buyer</span></h2>
+          <p class="lead"> John is a photo lover and wanted to get a nice photo for his office </p>
+          <p class="lead"> Thanks to <em>ArtByPeople</em> he discovered Baptiste and ordered this photo in a few clicks</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+{%block author_list%}{%endblock%}
+      <div class="row featurette">
+        <div class="col-md-8">
+          
+          <h2 class="featurette-heading"> Baptiste <span class="text-muted"> Our first seller</span></h2>
+          <p class="lead">Baptiste is a med student and also a passionate traveler!</p>
+          <p class="lead">Thanks to <em>ArtByPeople</em> he had the surprise to get some money from us, after John ordered that photo he shot in Island. Now, his shot is proudly hanged in the office of a CEO  in Manhattan</p>
+        </div>
+        <div class="col-md-1"> </div>
+        <div class="col-md-3">
+          <img class="featurette-image img-responsive" src="/media/images/Photo_profile_bat.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+    </div>
+
+      <!-- /END THE FEATURETTES -->
+
+      <!-- GALERIE DE PHOTOS THUMBNAIL - SOURCE du code : http://www.bootply.com/70929 -->
+  
+<div class="container">
+  <h2>Top pictures from our community <p class="lead"> Curated for the people, by the people</p></h2>
+    
+    {%block top_pictures %}{%endblock%}
+  
+  
+  
+  <hr>
+  	{% if user.is_authenticated %}
+        <h2 class="text-center"><a href="/photo/image">Show me more</a></h2>
+        {% endif %}
+
+  <hr>
+</div>
+      
+      
+      
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 <em>Art By People & Company</em>, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/photo/js/jquery.min.js"></script>
+    <script src="/static/photo/js/bootstrap.min.js"></script>
+    <script src="/static/photo/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/bootstrapjs/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
